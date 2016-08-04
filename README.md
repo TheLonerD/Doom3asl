@@ -1,5 +1,5 @@
 # Doom3asl
-LiveSplit's ASL-script _load removal_ for DOOM 3.
+LiveSplit's ASL-script _load removal_ (including __cutscenes__!) for DOOM 3.
 
 Currently supporting versions:
 - Doom 3 (1.3.1) - [[Steam](http://store.steampowered.com/app/9050/)];
