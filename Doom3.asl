@@ -45,10 +45,15 @@ init
 update
 {
     if (version == "") return false;
-    vars.isLoading = current.isLoading || current.isCutscene;
+    vars.isLoading = current.isLoading || (current.isCutscene && settings["countCutscenes"]);
 }
 
 isLoading
 {
     return vars.isLoading;
+}
+
+startup
+{
+    settings.Add("countCutscenes", true, "Count cutscenes in the game time");
 }
