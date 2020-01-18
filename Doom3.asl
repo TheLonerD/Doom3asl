@@ -48,16 +48,16 @@ state("RBDoom3BFG", "RBDOOM3-1.2.0-preview1")
 
 init
 {
-	vars.isLoading = false;
+    vars.isLoading = false;
     switch (modules.First().ModuleMemorySize)
     {
         case 38739968: // 3.38 MB (3,549,696 bytes)
             version = "dhewm3-1.5.0";
             break;
-	case 30056448: // 6.20 MB (6,510,592 bytes)
+        case 30056448: // 6.20 MB (6,510,592 bytes)
             version = "RBDOOM3-1.1.0-preview3";
             break;
-	case 44576768: // 7.94 MB (8,332,288 bytes)
+        case 44576768: // 7.94 MB (8,332,288 bytes)
             version = "RBDOOM3-1.2.0-preview1";
             break;
         case 15675392: // 5.46 MB (5,727,368 bytes)
@@ -74,8 +74,11 @@ init
 
 update
 {
-    if (version == "") return false;
-    
+    if (version == "")
+    {
+        return false;
+    }
+
     vars.isLoading = (current.isLoading && settings["skipLoading"]) || (current.isCutscene && settings["skipCutscenes"]);
 }
 
