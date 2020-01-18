@@ -76,7 +76,7 @@ update
 {
     if (version == "") return false;
     
-	vars.isLoading = (current.isLoading && settings["skipLoading"]) || (current.isCutscene && settings["skipCutscenes"]);
+    vars.isLoading = (current.isLoading && settings["skipLoading"]) || (current.isCutscene && settings["skipCutscenes"]);
 }
 
 isLoading
@@ -87,5 +87,5 @@ isLoading
 startup
 {
     settings.Add("skipLoading", true, "Do not include loading screens in the game time.");
-	settings.Add("skipCutscenes", true, "Do not include cutscenes in the game time.");
+    settings.Add("skipCutscenes", true, "Do not include cutscenes in the game time.");
 }
