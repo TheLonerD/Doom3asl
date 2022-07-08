@@ -8,3 +8,4 @@ Currently supporting versions:
 - RBDOOM-3-BFG (1.2.0-preview1-3f7cf53) - [[github](https://github.com/RobertBeckebans/RBDOOM-3-BFG/releases/tag/1.2.0-preview1)];
 - dhewm3 (1.5.0) - [[github](https://github.com/dhewm/dhewm3/releases/tag/1.5.0)];
 - dhewm3 (1.5.1) - [[github](https://github.com/dhewm/dhewm3/releases/tag/1.5.1)];
+- dhewm3 (1.5.2) - [[github](https://github.com/dhewm/dhewm3/releases/tag/1.5.2)];

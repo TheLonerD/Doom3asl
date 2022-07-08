@@ -10,22 +10,16 @@ state("dhewm3", "dhewm3-1.5.0")
     bool isCutscene : "base.dll", 0x4FA858;
 }
 
-state("Doom3.exe", "dhewm3-1.5.0")
-{
-    bool isLoading : 0x242AEB9;
-    bool isCutscene : "base.dll", 0x4FA858;
-}
-
 state("dhewm3", "dhewm3-1.5.1")
 {
     bool isLoading : 0x59F364;
     bool isCutscene : "base.dll", 0x51D7E0;
 }
 
-state("Doom3.exe", "dhewm3-1.5.1")
+state("dhewm3", "dhewm3-1.5.2")
 {
-    bool isLoading : 0x59F364;
-    bool isCutscene : "base.dll", 0x51D7E0;
+    bool isLoading : 0xD45155;
+    bool isCutscene : "base.dll", 0x51E7B0;
 }
 
 state("Doom3BFG", "BFG-Steam")
@@ -69,6 +63,9 @@ init
         case 42106880: // 13.90 MB (14,598,144 bytes)
             version = "dhewm3-1.5.1";
             break;
+        case 42369024: // 14.10 MB (14,789,632 bytes)
+            version = "dhewm3-1.5.2";
+            break;
         case 30056448: // 6.20 MB (6,510,592 bytes)
             version = "RBDOOM3-1.1.0-preview3";
             break;
@@ -82,6 +79,7 @@ init
             version = "Steam";
             break;
         default:
+            version = "Unknown";
             print("Unknown DOOM 3 version.");
             break;
     }
@@ -89,7 +87,7 @@ init
 
 update
 {
-    if (version == "")
+    if (version == "Unknown")
     {
         return false;
     }
