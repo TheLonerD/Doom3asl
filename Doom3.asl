@@ -18,7 +18,7 @@ state("dhewm3", "dhewm3-1.5.1")
 
 state("dhewm3", "dhewm3-1.5.2")
 {
-    bool isLoading : 0xD45155;
+    bool isLoading : 0x5CB9BC;
     bool isCutscene : "base.dll", 0x51E7B0;
 }
 
