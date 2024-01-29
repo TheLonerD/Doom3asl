@@ -1,4 +1,10 @@
-state("Doom3", "Steam")
+state("Doom3", "Steam-GOG")
+{
+    bool isLoading : 0x12BAF5D;
+    bool isCutscene : "gamex86.dll", 0x43F408;
+}
+
+state("Doom3", "GOG")
 {
     bool isLoading : 0x12BAF5D;
     bool isCutscene : "gamex86.dll", 0x43F408;
@@ -96,6 +102,9 @@ init
             break;
         case 41897984: // 5.57 MB (5,840,896 bytes)
             version = "Steam";
+            break;
+        case 41893888: // 5.56 MB (5,836,800 bytes)
+            version = "GOG";
             break;
         default:
             version = "Unknown";
