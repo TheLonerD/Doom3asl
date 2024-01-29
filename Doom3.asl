@@ -4,12 +4,6 @@ state("Doom3", "Steam-GOG")
     bool isCutscene : "gamex86.dll", 0x43F408;
 }
 
-state("Doom3", "GOG")
-{
-    bool isLoading : 0x12BAF5D;
-    bool isCutscene : "gamex86.dll", 0x43F408;
-}
-
 state("dhewm3", "dhewm3-1.5.0")
 {
     bool isLoading : 0x242AEB9;
