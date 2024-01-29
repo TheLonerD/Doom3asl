@@ -34,6 +34,12 @@ state("Doom3BFG", "BFG-Steam-New")
     bool isCutscene : 0xC90A84;
 }
 
+state("Doom3BFG", "BFG-GOG")
+{
+    bool isLoading : 0x4B56D4;
+    bool isCutscene : 0xC8EB2C;
+}
+
 state("Doom3BFG", "RBDOOM3-1.1.0-preview3")
 {
     bool isLoading : 0x19C4CEC;
@@ -84,6 +90,9 @@ init
             break;
         case 15130624: // 4.93 MB (5,177,344 bytes)
             version = "BFG-Steam-New";
+            break;
+        case 15119172: // 4.93 MB (5,176,968 bytes)
+            version = "BFG-GOG";
             break;
         case 41897984: // 5.57 MB (5,840,896 bytes)
             version = "Steam";
