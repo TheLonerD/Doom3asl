@@ -22,10 +22,16 @@ state("dhewm3", "dhewm3-1.5.2")
     bool isCutscene : "base.dll", 0x51E7B0;
 }
 
-state("Doom3BFG", "BFG-Steam")
+state("Doom3BFG", "BFG-Steam-Old")
 {
     bool isLoading : 0x4B56D4;
     bool isCutscene : 0xC8EB2C;
+}
+
+state("Doom3BFG", "BFG-Steam-New")
+{
+    bool isLoading : 0x4B77D4;
+    bool isCutscene : 0xC90A84;
 }
 
 state("Doom3BFG", "RBDOOM3-1.1.0-preview3")
@@ -55,7 +61,8 @@ state("RBDoom3BFG", "RBDOOM3-1.2.0-preview1")
 init
 {
     vars.isLoading = false;
-    switch (modules.First().ModuleMemorySize)
+    var size = modules.First().ModuleMemorySize;
+    switch (size)
     {
         case 38739968: // 3.38 MB (3,549,696 bytes)
             version = "dhewm3-1.5.0";
@@ -73,14 +80,17 @@ init
             version = "RBDOOM3-1.2.0-preview1";
             break;
         case 15675392: // 5.46 MB (5,727,368 bytes)
-            version = "BFG-Steam";
+            version = "BFG-Steam-Old";
+            break;
+        case 15130624: // 4.93 MB (5,177,344 bytes)
+            version = "BFG-Steam-New";
             break;
         case 41897984: // 5.57 MB (5,840,896 bytes)
             version = "Steam";
             break;
         default:
             version = "Unknown";
-            print("Unknown DOOM 3 version.");
+            print("Unknown DOOM 3 version: " + size);
             break;
     }
 }
