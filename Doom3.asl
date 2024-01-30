@@ -104,10 +104,8 @@ init
             version = "BFG-GOG";
             break;
         case 41897984: // 5.57 MB (5,840,896 bytes)
-            version = "Steam";
-            break;
         case 41893888: // 5.56 MB (5,836,800 bytes)
-            version = "GOG";
+            version = "Steam-GOG";
             break;
         default:
             version = "Unknown";
