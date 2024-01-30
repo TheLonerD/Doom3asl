@@ -1,7 +1,7 @@
 # Doom3asl
 LiveSplit's ASL-script _load removal_ (including __cutscenes__!) for DOOM 3.
 
-Currently supporting versions:
+Currently supported versions:
 - Doom 3 (1.3.1) - [[Steam](http://store.steampowered.com/app/9050/)], [[GOG](https://www.gog.com/en/game/doom_3/)];
 - Doom 3: BFG Edition (1.1400.346456) - [[GOG](https://www.gog.com/en/game/doom_3/)];
 - Doom 3: BFG Edition (1.1400.0) - [[Steam](http://store.steampowered.com/app/208200/)];
