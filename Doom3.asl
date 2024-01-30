@@ -64,6 +64,12 @@ state("RBDoom3BFG", "RBDOOM3-1.2.0-preview1")
     bool isCutscene : 0x249A92C;
 }
 
+state("RBDoom3BFG", "RBDOOM3-1.5.1-hotfix")
+{
+    bool isLoading : 0xB9A268;
+    bool isCutscene : 0x2F6170C;
+}
+
 init
 {
     vars.isLoading = false;
@@ -84,6 +90,9 @@ init
             break;
         case 44576768: // 7.94 MB (8,332,288 bytes)
             version = "RBDOOM3-1.2.0-preview1";
+            break;
+        case 56057856: // 12.9 MB (13,594,624 bytes)
+            version = "RBDOOM3-1.5.1-hotfix";
             break;
         case 15675392: // 5.46 MB (5,727,368 bytes)
             version = "BFG-Steam-Old";
